@@ -14,15 +14,13 @@ class FocalLossWithSmoothing(nn.Module):
             lb_smooth: float = 0.1,
             size_average: bool = True,
             ignore_index: int = None,
-            alpha: float = None,
-            most_weighted_index: int = None):
+            alpha: float = None):
         """
         :param gamma:
         :param lb_smooth:
         :param ignore_index:
         :param size_average:
         :param alpha:
-        :param most_weighted_index:
         """
         super(FocalLossWithSmoothing, self).__init__()
         self._num_classes = num_classes
@@ -32,7 +30,6 @@ class FocalLossWithSmoothing(nn.Module):
         self._ignore_index = ignore_index
         self._log_softmax = nn.LogSoftmax(dim=1)
         self._alpha = alpha
-        self._most_weighted_index = most_weighted_index
 
         if self._num_classes <= 1:
             raise ValueError('The number of classes must be 2 or higher')
