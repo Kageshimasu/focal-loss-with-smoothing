@@ -41,7 +41,7 @@ class FocalLossWithSmoothing(nn.Module):
 
     def forward(self, logits, label):
         """
-        :param logits:
+        :param logits: (batch_size, class, height, width)
         :param label:
         :return:
         """
