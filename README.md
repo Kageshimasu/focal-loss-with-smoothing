@@ -1,5 +1,9 @@
 ## Focal Loss with Label Smoothing
-Label Smoothing applied in Focal Loss
+Label Smoothing applied in Focal Loss \\
+This library is based on the below papers.
+
+- [Focal Loss for Dense Object Detection](https://arxiv.org/pdf/1708.02002.pdf).
+- [When Does Label Smoothing Help?](https://arxiv.org/pdf/1906.02629.pdf)
 
 # How to use
 ```
